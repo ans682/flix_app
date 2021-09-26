@@ -17,12 +17,16 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 - [x] (3pts) User can view the movie poster image for each movie.
 
 #### BONUS
-- [ ] (2pt) User can view the app on various device sizes and orientations.
+- [x] (2pt) User can view the app on various device sizes and orientations.
 - [ ] (1pt) Run your app on a real device.
 
 ### App Walkthrough GIF
-Here's a walkthrough of implemented user stories:
-![demo gif](images/flix_demo.gif)
+Here's a walkthrough of implemented user stories for iPhone 11:
+![demo gif](images/flix_demo_iphone_11.gif)
+
+The app's content can be viewed on devices with different sizes and orientations.
+Here's a walkthrough of the app for iPhone SE:
+![demo gif](images/flix_demo_iphone_se.gif)
 
 
 

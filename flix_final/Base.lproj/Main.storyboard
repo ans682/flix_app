@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,25 +23,37 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="156"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LFA-4a-unw">
-                                            <rect key="frame" x="13" y="0.0" width="114" height="136"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LFA-4a-unw">
+                                            <rect key="frame" x="13" y="22" width="114" height="136"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="114" id="RWm-Kg-YnR"/>
+                                                <constraint firstAttribute="height" constant="136" id="rbQ-Nz-tMS"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ja8-io-Yrb">
-                                            <rect key="frame" x="135" y="0.0" width="259" height="32"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ja8-io-Yrb">
+                                            <rect key="frame" x="135" y="22" width="259" height="29"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYQ-2s-kTA">
-                                            <rect key="frame" x="135" y="31" width="259" height="105"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYQ-2s-kTA">
+                                            <rect key="frame" x="135" y="44" width="259" height="101"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Ja8-io-Yrb" firstAttribute="leading" secondItem="tYQ-2s-kTA" secondAttribute="leading" id="2Qp-lK-3bU"/>
+                                        <constraint firstItem="Ja8-io-Yrb" firstAttribute="trailing" secondItem="RGT-aD-vC6" secondAttribute="trailingMargin" id="4KV-zB-lJD"/>
+                                        <constraint firstItem="Ja8-io-Yrb" firstAttribute="leading" secondItem="LFA-4a-unw" secondAttribute="trailing" constant="8" symbolic="YES" id="5K3-mz-uai"/>
+                                        <constraint firstItem="Ja8-io-Yrb" firstAttribute="trailing" secondItem="tYQ-2s-kTA" secondAttribute="trailing" id="8EF-K1-D5y"/>
+                                        <constraint firstItem="tYQ-2s-kTA" firstAttribute="bottom" secondItem="RGT-aD-vC6" secondAttribute="bottomMargin" id="CQO-Xj-D7z"/>
+                                        <constraint firstItem="Ja8-io-Yrb" firstAttribute="top" secondItem="LFA-4a-unw" secondAttribute="top" id="Hgp-dM-Ss7"/>
+                                        <constraint firstItem="tYQ-2s-kTA" firstAttribute="top" secondItem="RGT-aD-vC6" secondAttribute="topMargin" constant="33" id="P7U-iW-eea"/>
+                                        <constraint firstItem="LFA-4a-unw" firstAttribute="top" secondItem="RGT-aD-vC6" secondAttribute="topMargin" constant="11" id="SjR-dk-5Jk"/>
+                                        <constraint firstItem="LFA-4a-unw" firstAttribute="leading" secondItem="RGT-aD-vC6" secondAttribute="leadingMargin" constant="-7" id="gdA-y7-Gxz"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="posterView" destination="LFA-4a-unw" id="sl2-Pf-zG8"/>
@@ -60,21 +71,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o1V-z8-ghw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="247.82608695652175" y="109.82142857142857"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="flix_final" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1031.8840579710145" y="109.82142857142857"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oaD-1E-Xd9">
